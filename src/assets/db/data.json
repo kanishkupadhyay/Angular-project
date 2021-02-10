@@ -1,0 +1,111 @@
+{
+    "pizza":[
+        {
+            "id":1,
+            "pizzaName":"Margherita",
+            "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":250,
+            "size":"small",
+            "img":"../../assets/images/piz1.jpg"
+        },
+        {
+            "id":2,
+            "pizzaName":"Marinara",
+            "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":300,
+            "size":"medium",
+            "img":"../../assets/images/marinaara.png"
+        },
+        {
+            "id":3,
+            "pizzaName":"Carbonara",
+            "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":200,
+            "size":"small",
+            "img":"../../assets/images/piz2.png"
+        },
+        {
+            "id":4,
+            "pizzaName":"Americana",
+             "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":550,
+            "size":"large",
+            "img":"../../assets/images/piz3.png"
+        },
+        {
+            "id":5,
+            "pizzaName":"Chicken Mushroom",
+             "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":350,
+            "size":"medium",
+            "img":"../../assets/images/piz4.png"
+        },
+        {
+            "id":6,
+            "pizzaName":"Paneer Pizza",
+             "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":200,
+            "size":"small",
+            "img":"../../assets/images/piz5.png"
+        },
+        {
+            "id":7,
+            "pizzaName":"Vegiest Pizza",
+             "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":600,
+            "size":"large",
+            "img":"../../assets/images/piz7.png"
+        },
+        {
+            "id":8,
+            "pizzaName":"Pepperoni",
+             "description":"lorem epsium lorem dummy data i am writing here this is my angular project ",
+            "category":1,
+            "price":500,
+            "size":"large",
+            "img":"../../assets/images/piz8.png"
+        }
+    ],
+    "product":[
+        {
+            "productName":"Margherita",
+            "id":1
+        },
+        {
+            "productName":"Marinara",
+            "id":2
+        },
+        {
+            "productName":"Carbonara",
+            "id":3
+        },
+        {   
+            "productName":"Americana",
+            "id":4
+        },
+        {   
+            "productName":"Chicken Mushroom",
+            "id":5
+        },
+        {
+            "productName":"Paneer Pizza",
+            "id":6
+        },
+        {
+            "productName":"Vegiest Pizza",
+            "id":7
+        },
+        {
+            "productName":"Pepperoni",
+            "id":8
+        }
+        
+    ]
+}

@@ -1,0 +1,23 @@
+<div class="main">
+    <form (ngSubmit)="onSubmit(myForm);myForm.reset()" #myForm="ngForm">
+        <div class="mb-4">
+          <input required name="firstName" minlength="3" maxlength="15"  ngModel type="text" placeholder="Enter your first name" class="form-control">
+        </div>
+        <div class="mb-4">
+          <input required name="secondName" minlength="3" maxlength="15" ngModel type="text" placeholder="Enter your second name" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="mb-4">
+            <input name="email" required ngModel type="email" placeholder="Enter your Email" class="form-control" id="exampleInputPassword1">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-4">
+            <input name="phone" required ngModel minlength="10" maxlength="`0" type="number" placeholder="Enter your Mobile no" class="form-control" >
+          </div>
+          <div class="mb-4">
+            <textarea name="message" required ngModel placeholder="Write your message here" class="form-control" style="resize: none;"></textarea>
+          </div>
+          <div class="btn">
+        <button [disabled]="myForm.invalid" type="submit" class="submit">Submit</button>
+          </div>
+      </form>
+</div>

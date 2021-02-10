@@ -1,0 +1,39 @@
+<div *ngIf="emptyCart" class="kk">
+    <div class="nothing">
+        <h1>Nothing Added in Cart !</h1>
+    </div>
+    <div class="cart">
+        <img src="../../../assets/images/empty-cart.png" alt="">
+    </div>
+</div>
+
+<div *ngIf="wish">
+<div class="your">
+    <h1>Your Wishlist</h1>
+</div>
+<table class="table">
+    <thead>
+      <tr>
+          <th scope="col">index</th>
+        <th scope="col">Product Image</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let k of data; index as i">
+          <td>{{i+1}}</td>
+        <td><img class="imgs" src="{{k.img}}" alt="" srcset=""></td>
+        <td>{{k.name}}</td>
+        <td>{{k.price}}</td>
+        <button class="btn btn-danger" (click)="onClick()">Remove</button>
+      </tr>
+      
+    </tbody>
+  </table>
+  <div class="upper">
+  <div class="total">
+      <span>Total:</span>
+  </div>
+</div>
+</div>

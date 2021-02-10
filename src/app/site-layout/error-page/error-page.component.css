@@ -1,0 +1,51 @@
+.imgDiv{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+}
+.image{
+    height: 250px;
+    
+}
+.oops{
+    display: flex;
+    justify-content: center;
+  margin: 20px 0px;
+}
+.btn-div{
+    display: flex;
+    justify-content: center;
+   
+}
+.btn-div button {
+    background-color: #ff6e19;
+    padding: 5px 7px;
+    cursor: pointer;
+    margin: 40px 0px;
+    border-radius: 12px;
+}
+.btn-div a button {
+    color: #fff;
+    text-decoration: none;
+}
+@media(max-width:664px){
+    .oops h1{
+        font-size: 30px;
+    }
+    .image{
+        height: 200px;
+    }
+}
+@media(max-width:460px){
+    .oops h1{
+        font-size: 25px;
+    }
+    .image{
+        height: 180px;
+    }
+}
+@media(max-width:344px){
+    .image{
+        height: 160px;
+    }
+}

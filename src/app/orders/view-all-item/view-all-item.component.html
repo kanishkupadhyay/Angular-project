@@ -1,0 +1,49 @@
+<div class="mains">
+    <div class="sec-div">
+        <div class="are">
+            <span>Are you hungry?</span>
+        </div>
+        <div class="wait">
+            <h1>Don't Wait !</h1>
+        </div>
+        <div class="order-btn">
+            <a href="#pizza"><button>Order Now</button></a>
+        </div>
+
+    </div>
+
+    <div class="imgDiv">
+        <img src="../../../assets/images/hero-pizza.png" alt="" srcset="">
+    </div>
+
+</div>
+<div>
+    <div class="all">
+        <h1 id="pizza">All Pizzas</h1>
+    </div>
+    <div class="main">
+    <div class="col-lg-9 ">
+        <div class="row">
+
+            <div class="col-lg-6 col-md-6 mb-4" *ngFor="let products of pizzas">
+                <div class="card h-100">
+                    <a routerLink="/view-item/{{products.id}}"><img #img class="card-img-top" src="{{products.img}}" alt="error loading image"></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a  routerLink="/view-item/{{products.id}}" #name>{{products.pizzaName}}</a>
+
+                        </h4>
+                        <h5 #price>{{products.price |currency:'INR'}}</h5>
+                        <h6>Size:{{products.size}}</h6>
+                        <p class="card-text">{{products.description}}</p>
+                        <div class="add-btn">
+                            <button (click)="onClick(name,price,img)">+ Add</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">{{products.rating}}star</small>
+                    </div>
+                </div>
+            </div>
+</div>
+        </div>

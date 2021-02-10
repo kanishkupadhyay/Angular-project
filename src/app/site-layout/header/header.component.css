@@ -1,0 +1,52 @@
+.navbar-brand{
+    color: #ff6e19;
+}
+.navbar{
+    box-shadow: 0px 0px 16px #988888;
+    z-index: 3;
+    background-color: #fff;
+}
+.navbar-brand:hover{
+    color: black;
+    cursor: pointer;
+}
+ul li a.dum{
+    color: black;
+}
+.nav-item a{
+    color: black;
+}
+.nav-item a.mm{
+    color: black;
+}
+
+.nav-item a:hover{
+   color: #ff6e19;
+   cursor: pointer;
+}
+.nav-item a.actives{
+    color: #ff6e19;
+}
+#cart a{
+    padding: 11px 16px;
+    background-color: #ff6e19;
+    border-radius: 20px;
+    display: inline;
+}
+#cart{
+    margin-top: 10px;
+}
+#cart a:hover{
+    color: black !important;
+}
+ul li .kk{
+    color: coral;
+}
+.navbar-toggler{
+    background-color: #ff6e19;
+}
+@media(max-width:991px){
+    .navbar-expand-lg {
+        background: #d6d6d6;
+    }
+}

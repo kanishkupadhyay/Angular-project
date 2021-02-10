@@ -1,0 +1,24 @@
+.image{
+    height:90vh;
+    width: 500px;
+    margin: auto;
+}
+.img-div{
+    display: flex;
+}
+@media(max-width:560px){
+    .image{
+        width: 400px;
+    }
+}
+@media(max-width:437px){
+    .image{
+        width: 300px;
+    }
+}
+@media(max-width:310px){
+    .image{
+        width: 200px;
+        height: 80vh;
+    }
+}

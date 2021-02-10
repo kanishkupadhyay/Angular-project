@@ -1,0 +1,31 @@
+<div >
+<div class="card mt-4 img-div">
+    <img src="{{productData.img}}" alt="error" class="card-img-top img fluid image">
+    <div class="card-body">
+        <h2 class="card-title">{{productData.pizzaName}}</h2>
+    <h4>{{productData.price |currency:'INR'}}</h4>
+    <p class="card-text">Size: {{productData.size}}</p>
+    <strong class="text-warning">{{productData.description}}</strong>
+    </div>
+    </div>
+    
+    <!-- card -->
+    
+    <div class="card card-outline-secondary my-4">
+        <div class="card-header">
+            product reviews
+        </div>
+        <div class="card-body">
+            <p></p>
+            <hr>
+            <textarea #uname placeholder="write something here" style="resize: none;"></textarea><br>
+            <a  (click)="onClick(uname)" class="btn btn-success">Submit</a>
+
+         <div *ngFor="let data of comments">
+                <h4>{{data}}</h4>
+                <span>posted by anonymous</span>
+                <hr>
+            </div>
+            </div>
+        </div>
+    </div>
