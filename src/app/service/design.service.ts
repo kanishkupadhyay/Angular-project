@@ -7,14 +7,18 @@ import { BehaviorSubject } from 'rxjs';
 export class DesignService {
 
   constructor(private httpClient:HttpClient) { }
+  
 data=new BehaviorSubject({
   name:'',
   price:0
 })
-
+navBar=new BehaviorSubject(false)
+totalPrice=new BehaviorSubject(0)
 cart=new BehaviorSubject(0)
 empCart=new BehaviorSubject(true)
 wishList=new BehaviorSubject(false)
+username=new BehaviorSubject('')
+login=new BehaviorSubject(true)
   getPizza(){
     const url="http://localhost:3000/pizza"
     return this.httpClient.get(url)

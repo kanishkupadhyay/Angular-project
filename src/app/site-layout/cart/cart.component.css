@@ -71,3 +71,58 @@
     display: flex;
     justify-content: center;
 }
+@media(max-width:580px){
+    table{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    tbody{
+        margin-left: 46px;
+    }
+    th{
+        font-size: 13px;
+    }
+    td{
+        font-size: 13px;
+    }
+    .imgs{
+        height: 128px;
+    }
+    .del{
+        height: 52px;
+        width: 43px;
+       }
+}
+@media(max-width:400px){
+   th{
+       font-size: 10px;
+   }
+   .imgs{
+       height: 80px;
+   }
+   td{
+       font-size: 13px;
+   }
+   tbody{
+      margin-left: 36px;
+   }
+   thead{
+       margin-left: 30px;
+   }
+ .table{
+     align-items: baseline;
+ }
+   .del{
+    height: 52px;
+    width: 43px;
+   }
+}
+@media(max-width:354px){
+    thead{
+        margin: 0px 0px;
+    }
+    tbody{
+        margin: 0px 0px;
+    }
+}

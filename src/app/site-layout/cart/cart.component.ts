@@ -9,11 +9,12 @@ import { DesignService } from 'src/app/service/design.service';
 export class CartComponent implements OnInit {
   emptyCart:boolean=true
   wish:boolean=false
+  
   constructor(private design:DesignService) { 
    console.log(this.data.price)
   }
   data:any=[]
-  
+  total:number=0;
   num:number=0
   ngOnInit(): void {
     this.design.data.subscribe(data=>{
@@ -28,14 +29,20 @@ export class CartComponent implements OnInit {
     this.design.cart.subscribe(data=>{
       this.num=data
     })
+   
+    this.design.totalPrice.subscribe(price=>{
+      this.total=price
+      console.log(price)
+    })
   }
   onClick(){
     this.data.splice(this.data.length-1)
     if(this.data.length==0){
       this.emptyCart=true
     }
-    console.log(this.num)
+  
     this.design.cart.next(this.num=this.num-1)
+
   }
   
 

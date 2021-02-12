@@ -17,14 +17,8 @@
     justify-content: center;
    
 }
-.btn-div button {
-    background-color: #ff6e19;
-    padding: 5px 7px;
-    cursor: pointer;
-    margin: 40px 0px;
-    border-radius: 12px;
-}
-.btn-div a button {
+
+.btn-div  button a {
     color: #fff;
     text-decoration: none;
 }

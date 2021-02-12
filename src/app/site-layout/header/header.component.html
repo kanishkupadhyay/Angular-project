@@ -12,20 +12,23 @@
       <li  class="nav-item active">
           <a  class="nav-link mm "  routerLinkActive="kk"  [routerLinkActiveOptions]="{exact:true}"  routerLink="view-all-item">Menu</a>
       </li>
-      <li class="nav-item ">
-          <a class="nav-link" routerLinkActive="kk" routerLink="view-item-category">Items</a>
-      </li>
-      <li class="nav-item  " id="cart">
+      <li *ngIf="navSection"  class="nav-item  " id="cart">
         <a class="cart nav-link dum" routerLinkActive="kk"  routerLink="my-cart"><span #kk *ngIf="value">{{val}}</span> <img src="../../../assets//images/cart.png" alt="" srcset=""></a>
     </li>
-    <li class="nav-item ">
+    <li *ngIf="navSection"  class="nav-item ">
         <a class="nav-link" routerLinkActive="kk" routerLink="contact-us">Contact Us</a>
     </li>
-    <li class="nav-item ">
-      <a class="nav-link" routerLinkActive="kk" routerLink="#">Login</a>
+    <li *ngIf="loginSection" class="nav-item ">
+      <a class="nav-link" routerLinkActive="kk" routerLink="login">Login</a>
   </li>
     
-   
+  <li *ngIf="!loginSection" class="nav-item ">
+    <a class="nav-link"  >Welcome {{userName}}</a>
+</li>
+<li (click)="onLogout()" *ngIf="!loginSection" class="nav-item  logout">
+    <mat-icon class="icon">logout</mat-icon>
+    <a  class="nav-link ">Logout</a>
+</li>
       </ul>
   </div>
   </div>

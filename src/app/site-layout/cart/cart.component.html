@@ -26,14 +26,20 @@
         <td><img class="imgs" src="{{k.img}}" alt="" srcset=""></td>
         <td>{{k.name}}</td>
         <td>{{k.price}}</td>
-        <button class="btn btn-danger" (click)="onClick()">Remove</button>
+        <button (click)="onClick()" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+        
       </tr>
       
     </tbody>
   </table>
   <div class="upper">
   <div class="total">
-      <span>Total:</span>
+      <span>Total:{{total}}</span>
   </div>
+</div>
+<div>
+  <button mat-raised-button color="primary">Place order</button>
 </div>
 </div>

@@ -66,9 +66,4 @@ font-size: 19px;
      display: flex;
      justify-content: center;
  }
- .add-btn button{
-     background-color: #ff6e19;
-     color: #fff;
-     padding: 6px 26px;
-     border-radius: 12px;
- }
+ 

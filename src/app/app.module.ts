@@ -9,8 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import{SiteLayoutModule}from './site-layout/site-layout.module';
 import{OrdersModule}from '../app/orders/orders.module';
 import{HttpClientModule}from '@angular/common/http';
-import{FormsModule}from '@angular/forms'
-
+import{FormsModule}from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import{MatIconModule}from '@angular/material/icon';
+import{MatFormField, MatFormFieldModule}from'@angular/material/form-field'
+import{MatInputModule}from'@angular/material/input'
+import{MatDatepickerModule}from '@angular/material/datepicker'
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent
@@ -24,7 +29,12 @@ import{FormsModule}from '@angular/forms'
     SiteLayoutModule,
     OrdersModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

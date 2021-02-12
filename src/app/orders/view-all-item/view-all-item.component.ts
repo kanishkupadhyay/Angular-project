@@ -10,17 +10,24 @@ import { DesignService } from 'src/app/service/design.service';
 })
 export class ViewAllItemComponent implements OnInit {
 num:number=0
-  constructor(private designService:DesignService) { }
+sendVal:number=0
+total:number=0;
+addBtn:boolean=false
+  constructor(private designService:DesignService) { 
+   
+  }
   pizzas:any;
   
   ngOnInit(): void {
-
+  
 this.designService.getPizza().subscribe(data=>{
  this.pizzas=data
 })
 this.designService.data.next(this.arr)
 
-
+this.designService.navBar.subscribe(data=>{
+  this.addBtn=data
+})
 
   }
   arr:any=[]
@@ -29,6 +36,7 @@ this.designService.data.next(this.arr)
     this.designService.cart.next(this.num)
     this.designService.empCart.next(false)
     this.designService.wishList.next(true)
+   
     // console.log(img.src)
     // console.log(name.innerText)
     // console.log(price.innerText)
@@ -37,6 +45,13 @@ this.designService.data.next(this.arr)
       price:price.innerText,
       img:img.src
     })
+ let newArr=this.arr.forEach((element:any) => {
+      console.log(this.total=Number(element.price)+this.total)
+    });
+    console.log(this.sendVal)
+    this.sendVal=newArr;
+    this.designService.totalPrice.next(this.sendVal) 
   }
-
+  
+  
 }

@@ -50,3 +50,14 @@ ul li .kk{
         background: #d6d6d6;
     }
 }
+.logout{
+    display: inherit;
+    margin-left: 8px;
+}
+.icon{
+    margin-top: 7px;
+    margin-right: -9px;
+}
+.mat-icon{
+    cursor: pointer;
+}

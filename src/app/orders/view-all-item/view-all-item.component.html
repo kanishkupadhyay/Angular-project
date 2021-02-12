@@ -7,7 +7,7 @@
             <h1>Don't Wait !</h1>
         </div>
         <div class="order-btn">
-            <a href="#pizza"><button>Order Now</button></a>
+            <a><button>Order Now</button></a>
         </div>
 
     </div>
@@ -33,11 +33,13 @@
                             <a  routerLink="/view-item/{{products.id}}" #name>{{products.pizzaName}}</a>
 
                         </h4>
-                        <h5 #price>{{products.price |currency:'INR'}}</h5>
+                        <h5 #price>{{products.price}}</h5>
                         <h6>Size:{{products.size}}</h6>
                         <p class="card-text">{{products.description}}</p>
-                        <div class="add-btn">
-                            <button (click)="onClick(name,price,img)">+ Add</button>
+                        <div *ngIf="addBtn" class="add-btn">
+                            <button  (click)="onClick(name,price,img)" mat-fab color="primary" aria-label="Example icon button with a add icon">
+                                <mat-icon>add</mat-icon>
+                              </button>
                         </div>
                     </div>
                     <div class="card-footer">
