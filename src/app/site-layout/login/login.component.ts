@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   onSubmit(myForm:NgForm,uname:any){
     this.design.navBar.next(true)
     this.design.username.next(uname.value)
+    this.design.comment.next(true)
     let username=myForm.controls.username.value
     let password=myForm.controls.password.value
     console.log(`Username: ${username},Password: ${password}`)
@@ -25,5 +26,6 @@ export class LoginComponent implements OnInit {
     this.design.navBar.next(true)
     this.design.username.next(uname.value)
     this.design.login.next(false)
+    this.design.comment.next(true)
   }
 }

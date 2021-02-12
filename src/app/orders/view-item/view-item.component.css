@@ -22,3 +22,7 @@
         height: 80vh;
     }
 }
+.login{
+    display: flex;
+    justify-content: center;
+}

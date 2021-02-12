@@ -19,6 +19,7 @@ empCart=new BehaviorSubject(true)
 wishList=new BehaviorSubject(false)
 username=new BehaviorSubject('')
 login=new BehaviorSubject(true)
+comment=new BehaviorSubject(false)
   getPizza(){
     const url="http://localhost:3000/pizza"
     return this.httpClient.get(url)

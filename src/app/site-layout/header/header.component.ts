@@ -32,5 +32,7 @@ loginSection:boolean=true
   this.design.login.next(true)
   this.design.navBar.next(false)
     this.router.navigate(['view-all-item'])
+    this.design.comment.next(false)
   }
+  
 }

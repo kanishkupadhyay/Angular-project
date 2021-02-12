@@ -15,17 +15,22 @@
         <div class="card-header">
             product reviews
         </div>
-        <div class="card-body">
-            <p></p>
+        <div>
+            <h4>very nice pizza</h4>
+            <span>Posted by gajanand</span>
+        </div>
+        <div  *ngIf="commentSection"class="card-body">
             <hr>
             <textarea #uname placeholder="write something here" style="resize: none;"></textarea><br>
             <a  (click)="onClick(uname)" class="btn btn-success">Submit</a>
-
-         <div *ngFor="let data of comments">
+         <div  *ngFor="let data of comments">
                 <h4>{{data}}</h4>
-                <span>posted by anonymous</span>
+                <span>posted by {{user}}</span>
                 <hr>
+                </div>
             </div>
+            <div class="login" *ngIf=!commentSection>
+                <h2>Please login to write review</h2>
             </div>
         </div>
     </div>
