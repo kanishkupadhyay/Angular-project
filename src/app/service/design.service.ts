@@ -20,7 +20,7 @@ wishList=new BehaviorSubject(false)
 username=new BehaviorSubject('')
 login=new BehaviorSubject(true)
 comment=new BehaviorSubject(false)
-baseUrl = 'https://one-pizza-away-api.herokuapp.com/';
+baseUrl = 'https://one-pizza-away-api.herokuapp.com';
   getPizza(){
     const url=`${this.baseUrl}/pizza`
     return this.httpClient.get(url)
