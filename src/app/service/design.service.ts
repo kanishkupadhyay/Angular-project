@@ -20,16 +20,17 @@ wishList=new BehaviorSubject(false)
 username=new BehaviorSubject('')
 login=new BehaviorSubject(true)
 comment=new BehaviorSubject(false)
+baseUrl = 'https://one-pizza-away-api.herokuapp.com/';
   getPizza(){
-    const url="http://localhost:3000/pizza"
+    const url=`${this.baseUrl}/pizza`
     return this.httpClient.get(url)
   }
   viewProduct(categoryId:any){
-    const baseurl="http://localhost:3000/pizza/"+categoryId
+    const baseurl= `${this.baseUrl}/${categoryId}`
     return this.httpClient.get(baseurl)
   }
   getPizzaName(){
-    const linkUrl="http://localhost:3000/product";
+    const linkUrl=`${this.baseUrl}/product`;
     return this.httpClient.get(linkUrl)
   }
 }
