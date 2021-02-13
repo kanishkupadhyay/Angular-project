@@ -1,5 +1,5 @@
 .image{
-    height:90vh;
+    height: 100%;
     width: 500px;
     margin: auto;
 }
@@ -15,11 +15,16 @@
     .image{
         width: 300px;
     }
+    .login h2{
+        font-size: 25px;
+    }
 }
 @media(max-width:310px){
     .image{
         width: 200px;
-        height: 80vh;
+    }
+    .login h2{
+        font-size: 22px;
     }
 }
 .login{

@@ -21,12 +21,26 @@
     <div class="all">
         <h1 id="pizza">All Pizzas</h1>
     </div>
+    <div>
+        <div style="display: none;">
+        <mat-form-field >
+            <mat-label>Message</mat-label>
+            <input  matInput value="Item has been added in cart" #message>
+            <button routerLink="/m}y-cart" ></button>
+          </mat-form-field>
+          
+          <mat-form-field>
+            <mat-label>Action</mat-label>
+            <input matInput  value='Go to cart' #action>
+          </mat-form-field>
+        </div>
+    </div>
     <div class="main">
     <div class="col-lg-9 ">
         <div class="row">
 
-            <div class="col-lg-6 col-md-6 mb-4" *ngFor="let products of pizzas">
-                <div class="card h-100">
+            <div class="col-lg-6 col-md-6 mb-4 " *ngFor="let products of pizzas">
+                <div class="card h-100 main-div">
                     <a routerLink="/view-item/{{products.id}}"><img #img class="card-img-top" src="{{products.img}}" alt="error loading image"></a>
                     <div class="card-body">
                         <h4 class="card-title">
@@ -37,7 +51,7 @@
                         <h6>Size:{{products.size}}</h6>
                         <p class="card-text">{{products.description}}</p>
                         <div *ngIf="addBtn" class="add-btn">
-                            <button  (click)="onClick(name,price,img)" mat-fab color="primary" aria-label="Example icon button with a add icon">
+                            <button  (click)="onClick(name,price,img,message.value, action.value)" mat-fab color="primary" aria-label="Example icon button with a add icon">
                                 <mat-icon>add</mat-icon>
                               </button>
                         </div>
@@ -49,3 +63,12 @@
             </div>
 </div>
         </div>
+
+
+
+
+
+
+       
+          
+          

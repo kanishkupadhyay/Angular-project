@@ -6,7 +6,9 @@ import { ViewItemComponent } from './view-item/view-item.component';
 import { CategoryComponent } from './category/category.component';
 import{MatIconModule}from '@angular/material/icon';
 import{MatButton, MatButtonModule}from '@angular/material/button'
-
+import{MatSnackBarModule}from '@angular/material/snack-bar'
+import{MatFormFieldModule}from '@angular/material/form-field';
+import{MatInputModule}from '@angular/material/input'
 
 @NgModule({
   declarations: [ViewAllItemComponent, ViewItemComponent, CategoryComponent],
@@ -14,7 +16,10 @@ import{MatButton, MatButtonModule}from '@angular/material/button'
     CommonModule,
     RouterModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[ViewAllItemComponent]
 })

@@ -49,6 +49,9 @@ ul li .kk{
     .navbar-expand-lg {
         background: #d6d6d6;
     }
+    .log{
+        margin-left: 11px;
+    }
 }
 .logout{
     display: inherit;

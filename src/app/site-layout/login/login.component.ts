@@ -8,13 +8,18 @@ import { DesignService } from 'src/app/service/design.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
-  constructor(private design:DesignService) { }
+arr:any={
+  val:''
+}
+  constructor(private design:DesignService) { 
+ 
+  }
 
   ngOnInit(): void {
     
   }
   onSubmit(myForm:NgForm,uname:any){
+    
     this.design.navBar.next(true)
     this.design.username.next(uname.value)
     this.design.comment.next(true)
@@ -27,5 +32,11 @@ export class LoginComponent implements OnInit {
     this.design.username.next(uname.value)
     this.design.login.next(false)
     this.design.comment.next(true)
+    this.arr={
+      val:uname.value
+    }
+    this.design.createUser(this.arr).subscribe(data=>{
+      this.arr=data
+    })
   }
 }
