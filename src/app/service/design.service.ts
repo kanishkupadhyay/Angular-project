@@ -6,32 +6,32 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class DesignService {
 
-  constructor(private httpClient: HttpClient) { }
-
-  data = new BehaviorSubject({
-    name: '',
-    price: 0
-  })
-  navBar = new BehaviorSubject(false)
-  totalPrice = new BehaviorSubject(0)
-  cart = new BehaviorSubject(0)
-  empCart = new BehaviorSubject(true)
-  wishList = new BehaviorSubject(false)
-  username = new BehaviorSubject('')
-  login = new BehaviorSubject(true)
-  comment = new BehaviorSubject(false)
-  getPizza() {
-    const url = "http://localhost:3000/pizza"
+  constructor(private httpClient:HttpClient) { }
+  
+data=new BehaviorSubject({
+  name:'',
+  price:0
+})
+navBar=new BehaviorSubject(false)
+totalPrice=new BehaviorSubject(0)
+cart=new BehaviorSubject(0)
+empCart=new BehaviorSubject(true)
+wishList=new BehaviorSubject(false)
+username=new BehaviorSubject('')
+login=new BehaviorSubject(true)
+comment=new BehaviorSubject(false)
+baseUrl = 'https://one-pizza-away-api.herokuapp.com';
+  getPizza(){
+    const url=`${this.baseUrl}/pizza`
     return this.httpClient.get(url)
   }
-  viewProduct(categoryId: any) {
-    const baseurl = "http://localhost:3000/pizza/" + categoryId
+  viewProduct(categoryId:any){
+    const baseurl= `${this.baseUrl}/${categoryId}`
     return this.httpClient.get(baseurl)
   }
- 
-  getComments(comm:any){
-    const Comurl="http://localhost:3000/comments";
-    return this.httpClient.post(Comurl,comm)
+  getPizzaName(){
+    const linkUrl=`${this.baseUrl}/product`;
+    return this.httpClient.get(linkUrl)
   }
   viewComments(){
     const vUrl="http://localhost:3000/comments";
