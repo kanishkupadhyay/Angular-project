@@ -50,7 +50,7 @@
                         <h5 #price>{{products.price}}</h5>
                         <h6>Size:{{products.size}}</h6>
                         <p class="card-text">{{products.description}}</p>
-                        <div *ngIf="addBtn" class="add-btn">
+                        <div class="add-btn">
                             <button  (click)="onClick(name,price,img,message.value, action.value)" mat-fab color="primary" aria-label="Example icon button with a add icon">
                                 <mat-icon>add</mat-icon>
                               </button>
@@ -68,7 +68,3 @@
 
 
 
-
-       
-          
-          

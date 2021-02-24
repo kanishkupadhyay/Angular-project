@@ -18,21 +18,8 @@ loginSection:boolean=true
     this.design.cart.subscribe(data=>{
       this.val=data
     })
-  this.design.navBar.subscribe(data=>{
-    this.navSection=data
-  })
-  this.design.username.subscribe(data=>{
-    this.userName=data
-  })
-  this.design.login.subscribe(data=>{
-    this.loginSection=data
-  })
+
+ 
   }
-  onLogout(){
-  this.design.login.next(true)
-  this.design.navBar.next(false)
-    this.router.navigate(['view-all-item'])
-    this.design.comment.next(false)
-  }
-  
+ 
 }

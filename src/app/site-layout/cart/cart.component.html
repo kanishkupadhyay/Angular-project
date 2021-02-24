@@ -1,13 +1,13 @@
-<div *ngIf="emptyCart" class="kk">
+<!-- <div *ngIf="emptyCart" class="kk">
     <div class="nothing">
         <h1>Nothing Added in Cart !</h1>
     </div>
     <div class="cart">
         <img src="../../../assets/images/empty-cart.png" alt="">
     </div>
-</div>
+</div> -->
 
-<div *ngIf="wish">
+<div >
 <div class="your">
     <h1>Your Wishlist</h1>
 </div>
@@ -21,12 +21,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr  *ngFor="let k of data; index as i">
+      <tr  *ngFor="let k of datas; index as i">
           <td>{{i+1}}</td>
         <td><img class="imgs" src="{{k.img}}" alt="" srcset=""></td>
         <td>{{k.name}}</td>
         <td>{{k.price}}</td>
-        <button (click)="onClick()" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <button (click)="onClick(k.id)" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
           <mat-icon>delete</mat-icon>
         </button>
         
