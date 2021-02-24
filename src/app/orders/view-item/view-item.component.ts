@@ -52,9 +52,7 @@ onClick(uname:any){
   }
   else{
     this.comments.push(uname.value)
-    this.designService.getComments(this.kk).subscribe(data=>{
-      this.kk=data
-    })
+    
     
   }
  
