@@ -1,11 +1,11 @@
-<!-- <div *ngIf="emptyCart" class="kk">
+<div *ngIf="emptyCart" class="kk">
     <div class="nothing">
         <h1>Nothing Added in Cart !</h1>
     </div>
     <div class="cart">
         <img src="../../../assets/images/empty-cart.png" alt="">
     </div>
-</div> -->
+</div>
 
 
 <div>
@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<div >
+<div *ngIf="!emptyCart">
 <div class="your">
     <h1>Your Wishlist</h1>
 </div>

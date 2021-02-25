@@ -78,73 +78,61 @@
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 15
+      "id": 5
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 21
+      "id": 6
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 22
+      "id": 7
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 23
+      "id": 8
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 24
-    },
-    {
-      "name": "Americana",
-      "price": "550",
-      "img": "http://localhost:4200/assets/images/piz3.png",
-      "id": 25
-    },
-    {
-      "name": "Americana",
-      "price": "550",
-      "img": "http://localhost:4200/assets/images/piz3.png",
-      "id": 26
-    },
-    {
-      "name": "Americana",
-      "price": "550",
-      "img": "http://localhost:4200/assets/images/piz3.png",
-      "id": 27
+      "id": 9
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 28
+      "id": 10
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 29
+      "id": 11
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 30
+      "id": 12
     },
     {
       "name": "Marinara",
       "price": "300",
       "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 31
+      "id": 14
+    },
+    {
+      "name": "Marinara",
+      "price": "300",
+      "img": "http://localhost:4200/assets/images/marinaara.png",
+      "id": 16
     }
   ],
   "comments": [
