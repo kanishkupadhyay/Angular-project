@@ -41,7 +41,7 @@
           <td>{{i+1}}</td>
         <td><img class="imgs" src="{{k.img}}" alt="" srcset=""></td>
         <td>{{k.name}}</td>
-        <td>{{k.price}}</td>
+        <td>{{k.price |currency:'INR'}}</td>
         <button (click)="onClick(k.id,message.value,action.value)" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
           <mat-icon>delete</mat-icon>
         </button>

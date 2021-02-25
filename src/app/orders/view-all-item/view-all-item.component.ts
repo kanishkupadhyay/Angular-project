@@ -13,7 +13,7 @@ num:number=0
 sendVal:number=0
 total:number=0;
 addBtn:boolean=false
-
+spinner:boolean=true
   constructor(private designService:DesignService,private _snackBar: MatSnackBar) { 
    
   }
@@ -25,6 +25,7 @@ addBtn:boolean=false
 
 this.designService.getPizza().subscribe(data=>{
  this.pizzas=data
+ this.spinner=false
 })
 this.designService.data.next(this.arr)
 

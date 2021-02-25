@@ -73,68 +73,7 @@
       "img": "../../assets/images/piz8.png"
     }
   ],
-  "cartItem": [
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 5
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 6
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 7
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 8
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 9
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 10
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 11
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 12
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 14
-    },
-    {
-      "name": "Marinara",
-      "price": "300",
-      "img": "http://localhost:4200/assets/images/marinaara.png",
-      "id": 16
-    }
-  ],
+  "cartItem": [],
   "comments": [
     {
       "id": 1,

@@ -10,7 +10,7 @@ import{MatSnackBarModule}from '@angular/material/snack-bar'
 import{MatFormFieldModule}from '@angular/material/form-field';
 import{MatInputModule}from '@angular/material/input';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [ViewAllItemComponent, ViewItemComponent, CategoryComponent],
   imports: [
@@ -21,7 +21,8 @@ import {MatCardModule} from '@angular/material/card';
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   exports:[ViewAllItemComponent,ViewItemComponent]
 })
