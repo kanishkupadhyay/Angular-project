@@ -15,7 +15,15 @@ total:number=0;
 addBtn:boolean=false
 spinner:boolean=true
   constructor(private designService:DesignService,private _snackBar: MatSnackBar) { 
+   let d:any=0
+   this.designService.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.designService.val.next(d)
+   })
    
+   console.log(d)
   }
   pizzas:any;
 
@@ -33,6 +41,15 @@ this.designService.data.next(this.arr)
   arr:any=[]
   onClick(name:any,price:any,img:any,message: string, action: string){
   
+    let d:any=0
+   this.designService.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.designService.val.next(d)
+   })
+
+
     this.num++
     this.designService.cart.next(this.num)
     this.designService.empCart.next(false)
@@ -53,12 +70,12 @@ this.designService.data.next(this.arr)
       console.log(data)
     })
 
- let newArr=this.arr.forEach((element:any) => {
-      console.log(this.total=Number(element.price)+this.total)
-    });
-    console.log(this.sendVal)
-    this.sendVal=newArr;
-    this.designService.totalPrice.next(this.sendVal) 
+//  let newArr=this.arr.forEach((element:any) => {
+//       console.log(this.total=Number(element.price)+this.total)
+//     });
+//     console.log(this.sendVal)
+//     this.sendVal=newArr;
+//     this.designService.totalPrice.next(this.sendVal) 
   }
   
   

@@ -21,6 +21,15 @@ export class CartComponent implements OnInit {
   num:number=0
   ngOnInit(): void {
     
+
+    let d:any=0
+   this.design.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.design.val.next(d)
+   })
+
    this.design.getCartItem().subscribe(data=>{
      this.datas=data
      if(this.datas.length==0){
@@ -50,6 +59,13 @@ export class CartComponent implements OnInit {
     this.design.getCartItem().subscribe(data=>{
       this.datas=data
     })
+    let d:any=0
+   this.design.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.design.val.next(d)
+   })
     if(this.datas.length==0){
       this.emptyCart=true
     }

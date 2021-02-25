@@ -19,6 +19,8 @@ empCart=new BehaviorSubject(true)
 wishList=new BehaviorSubject(false)
 username=new BehaviorSubject('')
 
+val=new BehaviorSubject(0)
+
 
 baseUrl = 'https://one-pizza-away-api.herokuapp.com';
   getPizza(){
