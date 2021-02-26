@@ -70,12 +70,12 @@ this.designService.data.next(this.arr)
       console.log(data)
     })
 
-//  let newArr=this.arr.forEach((element:any) => {
-//       console.log(this.total=Number(element.price)+this.total)
-//     });
-//     console.log(this.sendVal)
-//     this.sendVal=newArr;
-//     this.designService.totalPrice.next(this.sendVal) 
+ let newArr=this.arr.forEach((element:any) => {
+      console.log(this.total=Number(element.price)+this.total)
+    });
+    console.log(this.sendVal)
+    this.sendVal=newArr;
+    this.designService.totalPrice.next(this.sendVal) 
   }
   
   
