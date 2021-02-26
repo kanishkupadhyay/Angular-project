@@ -1,13 +1,29 @@
-<!-- <div *ngIf="emptyCart" class="kk">
+<div *ngIf="emptyCart" class="kk">
     <div class="nothing">
         <h1>Nothing Added in Cart !</h1>
     </div>
     <div class="cart">
         <img src="../../../assets/images/empty-cart.png" alt="">
     </div>
-</div> -->
+</div>
 
-<div >
+
+<div>
+  <div style="display: none;">
+  <mat-form-field >
+      <mat-label>Message</mat-label>
+      <input  matInput value="Item has been deleted" #message>
+      <button routerLink="/my-cart" ></button>
+    </mat-form-field>
+    
+    <mat-form-field>
+      <mat-label>Action</mat-label>
+      <input matInput  value='View Cart' #action>
+    </mat-form-field>
+  </div>
+</div>
+
+<div *ngIf="!emptyCart">
 <div class="your">
     <h1>Your Wishlist</h1>
 </div>
@@ -25,8 +41,8 @@
           <td>{{i+1}}</td>
         <td><img class="imgs" src="{{k.img}}" alt="" srcset=""></td>
         <td>{{k.name}}</td>
-        <td>{{k.price}}</td>
-        <button (click)="onClick(k.id)" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <td>{{k.price |currency:'INR'}}</td>
+        <button (click)="onClick(k.id,message.value,action.value)" class="del" mat-fab color="primary" aria-label="Example icon button with a delete icon">
           <mat-icon>delete</mat-icon>
         </button>
         

@@ -15,8 +15,9 @@ import{MatFormFieldModule}from'@angular/material/form-field'
 import{MatInputModule}from'@angular/material/input'
 import{MatDatepickerModule}from '@angular/material/datepicker';
 import { from } from 'rxjs';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ErrorPageComponent, CartComponent, ContactComponent],
+  declarations: [HeaderComponent, FooterComponent, ErrorPageComponent, CartComponent, ContactComponent, ScrollToTopComponent,ScrollToTopComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -29,6 +30,6 @@ import { from } from 'rxjs';
     MatInputModule,
     MatDatepickerModule
   ],
-  exports:[HeaderComponent,FooterComponent,ErrorPageComponent,CartComponent,ContactComponent]
+  exports:[HeaderComponent,FooterComponent,ErrorPageComponent,CartComponent,ContactComponent,ScrollToTopComponent]
 })
 export class SiteLayoutModule { }
