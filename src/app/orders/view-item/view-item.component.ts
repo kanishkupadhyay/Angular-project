@@ -9,13 +9,7 @@ import { DesignService } from 'src/app/service/design.service';
   styleUrls: ['./view-item.component.css']
 })
 export class ViewItemComponent implements OnInit {
-   kk:any=
-    {
-      id:1,
-      val:''
-    }
-  
-  commentSection:boolean=false
+
   comments:any=[]
   user:string=''
   constructor(private route:ActivatedRoute, private designService:DesignService) { 
@@ -29,32 +23,20 @@ productData:any;
     })
     this.designService.viewProduct(this.productId).subscribe(data=>{
       this.productData=data
+      console.log(this.productData)
     })
-    this.designService.comment.subscribe(data=>{
-      this.commentSection=data
-    })
+  
     this.designService.username.subscribe(data=>{
       this.user=data
     })
-    this.designService.viewComments().subscribe(data=>{
+    this.designService.getCommentSection().subscribe(data=>{
       this.comments=data
     })
+    
   }
 onClick(uname:any){
 
-  this.kk=
-    {
-      val:uname.value
-    }
-  
-  if(uname.value==''){
-    alert('please write something')
-  }
-  else{
-    this.comments.push(uname.value)
-    
-    
-  }
+ 
  
 }
 }
