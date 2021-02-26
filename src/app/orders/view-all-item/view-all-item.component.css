@@ -69,4 +69,10 @@ font-size: 19px;
  .main-div{
     box-shadow: 2px 2px 8px #8a8a8aa1;
  }
- 
+ .spinner{
+     display: flex;
+     justify-content: center;
+ }
+ .mat-spinner{
+     color: #ff6e19;
+ }

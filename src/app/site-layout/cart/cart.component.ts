@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { DesignService } from 'src/app/service/design.service';
 
 @Component({
@@ -8,21 +9,40 @@ import { DesignService } from 'src/app/service/design.service';
 })
 export class CartComponent implements OnInit {
   emptyCart:boolean=true
+  
   wish:boolean=false
   
-  constructor(private design:DesignService) { 
-   console.log(this.data.price)
+  
+  constructor(private design:DesignService,private _snackBar:MatSnackBar) { 
+  
   }
-  data:any=[]
+  datas:any=[]
   total:number=0;
   num:number=0
   ngOnInit(): void {
-    this.design.data.subscribe(data=>{
-      this.data=data
-    })
-    this.design.empCart.subscribe(data=>[
+    
+
+    let d:any=0
+   this.design.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.design.val.next(d)
+   })
+
+   this.design.getCartItem().subscribe(data=>{
+     this.datas=data
+     if(this.datas.length==0){
+       this.emptyCart=true
+     }
+     else{
+       this.emptyCart=false
+     }
+     console.log(data)
+   })
+    this.design.empCart.subscribe(data=>{
       this.emptyCart=data
-    ])
+    })
     this.design.wishList.subscribe(data=>{
       this.wish=data
     })
@@ -35,14 +55,42 @@ export class CartComponent implements OnInit {
       console.log(price)
     })
   }
-  onClick(){
-    this.data.splice(this.data.length-1)
-    if(this.data.length==0){
+  onClick(id:any,message:any,action:any){
+    this.design.getCartItem().subscribe(data=>{
+      this.datas=data
+    })
+    let d:any=0
+   this.design.getCartItem().subscribe(data=>{
+    let kk:any=[]
+    kk=data
+    d=kk.length
+    this.design.val.next(d)
+   })
+    if(this.datas.length==0){
       this.emptyCart=true
     }
+    else{
+      this.emptyCart=false
+    }
+    
+    // this.datas.splice(this.datas.length-1)
+    // if(this.datas.length==0){
+    //   this.emptyCart=true
+    // }
   
-    this.design.cart.next(this.num=this.num-1)
+    // this.design.cart.next(this.num=this.num-1)
 
+    this.design.deleteCartItem(id).subscribe(data=>{
+      console.log(data)
+    })
+    this.design.getCartItem().subscribe(data=>{
+      this.datas=data
+      console.log(data)
+    })
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
+   
   }
   
 

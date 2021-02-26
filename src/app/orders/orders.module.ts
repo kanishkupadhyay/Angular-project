@@ -8,8 +8,9 @@ import{MatIconModule}from '@angular/material/icon';
 import{MatButton, MatButtonModule}from '@angular/material/button'
 import{MatSnackBarModule}from '@angular/material/snack-bar'
 import{MatFormFieldModule}from '@angular/material/form-field';
-import{MatInputModule}from '@angular/material/input'
-
+import{MatInputModule}from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [ViewAllItemComponent, ViewItemComponent, CategoryComponent],
   imports: [
@@ -19,8 +20,10 @@ import{MatInputModule}from '@angular/material/input'
     MatButtonModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
-  exports:[ViewAllItemComponent]
+  exports:[ViewAllItemComponent,ViewItemComponent]
 })
 export class OrdersModule { }

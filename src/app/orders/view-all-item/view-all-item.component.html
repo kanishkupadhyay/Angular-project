@@ -26,7 +26,7 @@
         <mat-form-field >
             <mat-label>Message</mat-label>
             <input  matInput value="Item has been added in cart" #message>
-            <button routerLink="/m}y-cart" ></button>
+            <button routerLink="/my-cart" ></button>
           </mat-form-field>
           
           <mat-form-field>
@@ -35,6 +35,14 @@
           </mat-form-field>
         </div>
     </div>
+
+<!-- Spinner -->
+<div *ngIf="spinner" class="spinner">
+    <mat-spinner color="warn"></mat-spinner>
+</div>
+
+<!--  -->
+
     <div class="main">
     <div class="col-lg-9 ">
         <div class="row">
@@ -50,7 +58,7 @@
                         <h5 #price>{{products.price}}</h5>
                         <h6>Size:{{products.size}}</h6>
                         <p class="card-text">{{products.description}}</p>
-                        <div *ngIf="addBtn" class="add-btn">
+                        <div class="add-btn">
                             <button  (click)="onClick(name,price,img,message.value, action.value)" mat-fab color="primary" aria-label="Example icon button with a add icon">
                                 <mat-icon>add</mat-icon>
                               </button>
@@ -68,7 +76,3 @@
 
 
 
-
-       
-          
-          

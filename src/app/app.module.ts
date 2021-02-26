@@ -16,7 +16,8 @@ import{MatFormField, MatFormFieldModule}from'@angular/material/form-field'
 import{MatInputModule}from'@angular/material/input'
 import{MatDatepickerModule}from '@angular/material/datepicker'
 import { from } from 'rxjs';
-import{MatSnackBarModule}from '@angular/material/snack-bar'
+import{MatSnackBarModule}from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import{MatSnackBarModule}from '@angular/material/snack-bar'
     MatInputModule,
     MatDatepickerModule,
     MatSnackBarModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
