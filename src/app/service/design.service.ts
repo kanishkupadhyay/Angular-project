@@ -12,39 +12,51 @@ data=new BehaviorSubject({
   name:'',
   price:0
 })
-navBar=new BehaviorSubject(false)
+commentsUrl="http://localhost:3000/comments/"
 totalPrice=new BehaviorSubject(0)
 cart=new BehaviorSubject(0)
 empCart=new BehaviorSubject(true)
 wishList=new BehaviorSubject(false)
 username=new BehaviorSubject('')
-login=new BehaviorSubject(true)
-comment=new BehaviorSubject(false)
+
+
 baseUrl = 'https://one-pizza-away-api.herokuapp.com';
   getPizza(){
     const url=`${this.baseUrl}/pizza`
     return this.httpClient.get(url)
   }
   viewProduct(categoryId:any){
-    const baseurl= `${this.baseUrl}/${categoryId}`
+    const baseurl= `http://localhost:3000/pizza/${categoryId}`
     return this.httpClient.get(baseurl)
   }
   getPizzaName(){
     const linkUrl=`${this.baseUrl}/product`;
     return this.httpClient.get(linkUrl)
   }
-  viewComments(){
-    const vUrl="http://localhost:3000/comments";
-    return this.httpClient.get(vUrl)
+
+
+  createCartItem(item:any){
+    const url="http://localhost:3000/cartItem";
+    return this.httpClient.post(url,item)
   }
 
-  createUser(data:any){
-    const cUrl="http://localhost:3000/users";
-    return this.httpClient.post(cUrl,data)
+  getCartItem(){
+    const url="http://localhost:3000/cartItem";
+    return this.httpClient.get(url)
   }
-  getUser(){
-    const cUrl="http://localhost:3000/users";
-    return this.httpClient.get(cUrl)
+
+  deleteCartItem(id:any){
+    const url="http://localhost:3000/cartItem"+"/"+id;
+    return this.httpClient.delete(url,id)
   }
+
+
+
+getCommentSection(){
+  return this.httpClient.get(this.commentsUrl)
+}
+
+
+
 
 }

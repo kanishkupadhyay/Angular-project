@@ -28,10 +28,6 @@ this.designService.getPizza().subscribe(data=>{
 })
 this.designService.data.next(this.arr)
 
-this.designService.navBar.subscribe(data=>{
-  this.addBtn=data
-})
-
   }
   arr:any=[]
   onClick(name:any,price:any,img:any,message: string, action: string){
@@ -46,12 +42,16 @@ this.designService.navBar.subscribe(data=>{
     // console.log(img.src)
     // console.log(name.innerText)
     // console.log(price.innerText)
-    this.arr.push({
+    this.arr={
       name:name.innerText,
       price:price.innerText,
       img:img.src
+    }
+    this.designService.createCartItem(this.arr).subscribe(data=>{
+      this.arr=data
+      console.log(data)
     })
-    
+
  let newArr=this.arr.forEach((element:any) => {
       console.log(this.total=Number(element.price)+this.total)
     });

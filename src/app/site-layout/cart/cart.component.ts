@@ -11,18 +11,19 @@ export class CartComponent implements OnInit {
   wish:boolean=false
   
   constructor(private design:DesignService) { 
-   console.log(this.data.price)
+
   }
-  data:any=[]
+  datas:any=[]
   total:number=0;
   num:number=0
   ngOnInit(): void {
-    this.design.data.subscribe(data=>{
-      this.data=data
-    })
-    this.design.empCart.subscribe(data=>[
+   this.design.getCartItem().subscribe(data=>{
+     this.datas=data
+     console.log(data)
+   })
+    this.design.empCart.subscribe(data=>{
       this.emptyCart=data
-    ])
+    })
     this.design.wishList.subscribe(data=>{
       this.wish=data
     })
@@ -35,14 +36,21 @@ export class CartComponent implements OnInit {
       console.log(price)
     })
   }
-  onClick(){
-    this.data.splice(this.data.length-1)
-    if(this.data.length==0){
-      this.emptyCart=true
-    }
+  onClick(id:any){
+    // this.datas.splice(this.datas.length-1)
+    // if(this.datas.length==0){
+    //   this.emptyCart=true
+    // }
   
-    this.design.cart.next(this.num=this.num-1)
+    // this.design.cart.next(this.num=this.num-1)
 
+    this.design.deleteCartItem(id).subscribe(data=>{
+      console.log(data)
+    })
+    this.design.getCartItem().subscribe(data=>{
+      this.datas=data
+      console.log(data)
+    })
   }
   
 

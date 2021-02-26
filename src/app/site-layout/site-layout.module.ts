@@ -11,13 +11,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import{MatIconModule}from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
-import { LoginComponent } from './login/login.component';
 import{MatFormFieldModule}from'@angular/material/form-field'
 import{MatInputModule}from'@angular/material/input'
 import{MatDatepickerModule}from '@angular/material/datepicker';
 import { from } from 'rxjs';
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ErrorPageComponent, CartComponent, ContactComponent, LoginComponent],
+  declarations: [HeaderComponent, FooterComponent, ErrorPageComponent, CartComponent, ContactComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -30,6 +29,6 @@ import { from } from 'rxjs';
     MatInputModule,
     MatDatepickerModule
   ],
-  exports:[HeaderComponent,FooterComponent,ErrorPageComponent,CartComponent,ContactComponent,LoginComponent]
+  exports:[HeaderComponent,FooterComponent,ErrorPageComponent,CartComponent,ContactComponent]
 })
 export class SiteLayoutModule { }
