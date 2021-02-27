@@ -13,6 +13,7 @@ data=new BehaviorSubject({
   price:0
 })
 commentsUrl="http://localhost:3000/comments/"
+cartItemUrl="https://angular-pizza-database.herokuapp.com/cartItem"
 totalPrice=new BehaviorSubject(0)
 cart=new BehaviorSubject(0)
 empCart=new BehaviorSubject(true)
@@ -38,17 +39,17 @@ baseUrl = 'https://one-pizza-away-api.herokuapp.com';
 
 
   createCartItem(item:any){
-    const url="http://localhost:3000/cartItem";
-    return this.httpClient.post(url,item)
+    
+    return this.httpClient.post(this.cartItemUrl,item)
   }
 
   getCartItem(){
-    const url="http://localhost:3000/cartItem";
-    return this.httpClient.get(url)
+    
+    return this.httpClient.get(this.cartItemUrl)
   }
 
   deleteCartItem(id:any){
-    const url="http://localhost:3000/cartItem"+"/"+id;
+    const url=this.cartItemUrl+"/"+id;
     return this.httpClient.delete(url,id)
   }
 
